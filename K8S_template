@@ -1,7 +1,16 @@
-1.SMA mode:
+1.CDF version:
 2.SMA version:
-3.SMA profile:
-4.NFS:
-5.Kubernetes get node:
-5.Kubernetes top node:
-6.Kubernetes get pod:
+3.SMA mode:
+4.SMA profile:
+5.Master HA or Not:
+6.Kubernetes get node:
+7.Kubernetes top node:
+8.Kubernetes get pod:
+9.NFS Server:
+10.NFS Disk Space:
+11.Database Type:
+12.Database Version:
+13.LDAP Configured:
+14.SMTP Configured:
+15.SAML Configured:
+16.Upgraded or Not:
