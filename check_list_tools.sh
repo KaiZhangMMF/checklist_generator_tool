@@ -54,7 +54,7 @@ includescripts(){
 
 timeoutfun(){
     i=0
-    while [[ $i -lt 300 ]]; do
+    while [[ $i -lt 100 ]]; do
         sleep 3
         echo "true" >&1000
         let i++
