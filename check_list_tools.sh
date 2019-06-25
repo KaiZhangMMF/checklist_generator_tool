@@ -54,7 +54,7 @@ includescripts(){
 
 timeoutfun(){
     i=0
-    while [[ $i -lt 100 ]]; do
+    while [[ $i -lt 300 ]]; do
         sleep 3
         echo "true" >&1000
         let i++
@@ -584,13 +584,17 @@ check_list(){
 
 help_instuctions(){
     printf "*********************below is the instruction for this script*********************\n"
+    printf "usage: ./check_list_tools.sh --run/-r or --help/-h\n
+    this script will collect required information from this machine and generate a check-list report\n
+    in the appointed path. please run this script in customer environment and transfer the hardare_info\n
+    and k8s_info file to RnD for a better vision for customer's environment and problems\n"
     printf "*********************this is the end of instruction for this script*********************\n"
 }
 
 if [[ ! "$1" ]]; then
     echo -e "no options have received!"
-    echo -e "please run checklist_run -h or --help to get the instruction of this scripts"
-    echo -e "please run checklist_run -r or --run to run this scripts"
+    echo -e "please run check_list_tools.sh -h or --help to get the instruction of this scripts"
+    echo -e "please run check_list_tools.sh -r or --run to run this scripts"
 fi
 
 while [[ -n "$1" ]]; do
@@ -600,8 +604,8 @@ while [[ -n "$1" ]]; do
         "-r" ) check_list;;
         "--run" ) check_list;;
          *) echo -e "$1 is not a validate option"
-            echo -e "please run checklist_run -h or --help to get the instruction of this scripts"
-            echo -e "please run checklist_run -r or --run to run this scripts";;
+            echo -e "please run check_list_tools.sh -h or --help to get the instruction of this scripts"
+            echo -e "please run check_list_tools.sh -r or --run to run this scripts";;
     esac
     shift
 done
